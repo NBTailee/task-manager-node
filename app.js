@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const routes = require("./Routes/routes");
 const dotenv = require("dotenv");
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // libs setup
 dotenv.config();
