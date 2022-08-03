@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Tasks manager</title>
+  </head>
+  <body>
+    <div class="task-manager">
+      <h3 class="header">Tasks Manager</h3>
+      <form class="task-form">
+        <div class="flex-container">
+          <input
+            type="text"
+            maxlength="30"
+            placeholder="e.g wash dishes"
+            class="task-input"
+            name="name"
+          />
+          <button class="task-btn" type="submit">Submit</button>
+        </div>
+      </form>
+      <div class="alert"></div>
+  </div>
+
+  <div class="task-container"></div>
+  </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector(".task-manager"), {
+        max: 5,
+        speed: 200,
+        glare: true,
+        "max-glare": 0.2,
+      });
+      VanillaTilt.init(document.querySelector(".task-container"), {
+        max: 5,
+        speed: 200,
+        // glare: true,
+        // "max-glare": 1,
+      });
+    </script>
+  </body>
+</html>

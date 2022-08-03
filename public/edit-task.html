@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./edit-task.css" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <title>Tasks manager</title>
+  </head>
+  <body>
+    <form class="single-task-form">
+      <div class="edit-manager">
+        <div class="header">Edit Task</div>
+        <div class="section">
+          <div class="label">Task ID</div>
+          <div class="content"></div>
+        </div>
+        <div class="section">
+          <div class="label">Task Name</div>
+          <input maxlength="30" type="text" class="edit-input" />
+        </div>
+        <div class="section">
+          <div class="label">Completed</div>
+          <input type="checkbox" autocomplete="false" class="completed" />
+        </div>
+        <button class="btn">Edit Task</button>
+        <div class="alert"></div>
+      </div>
+    </form>
+    <a href="index.html" class="back">Back to Tasks</a>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./edit-task.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector(".edit-manager"), {
+        max: 15,
+        speed: 200,
+        glare: true,
+        "max-glare": 0.2,
+      });
+    </script>
+  </body>
+</html>
