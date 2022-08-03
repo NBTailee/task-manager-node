@@ -18,7 +18,7 @@ app.use("/api/tasks", routes);
 
 // connect DB
 const start = async () => {
-  const { LOCAL_ADDRESS = "0.0.0.0" } = process.env;
+  const LOCAL_ADDRESS = "0.0.0.0";
   try {
     await connectFunction(process.env.MONGO_URI);
     app.listen(PORT, LOCAL_ADDRESS, () => {
