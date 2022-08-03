@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // libs setup
-dotenv.config({ path: __dirname + "/.env" });
+dotenv.config();
 app.use(morgan("tiny"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -20,7 +20,7 @@ app.use("/api/tasks", routes);
 const start = async () => {
   const LOCAL_ADDRESS = "0.0.0.0";
   try {
-    await connectFunction(process.env.MONGO_URI);
+    await connectFunction(process.env.MONGO_URL);
     app.listen(PORT, LOCAL_ADDRESS, () => {
       console.log(`app is running successfully on ${PORT}`);
     });
